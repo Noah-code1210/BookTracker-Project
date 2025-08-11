@@ -63,11 +63,44 @@
 
 .book__info--wrapper {
     width: 100%;
-    max-width: 210px;
-    height: 280px;
+    max-width: 240px;
+    height: 310px;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
     background-color: #ececec;
+    gap: 30px;
+    padding: 10px 12px;
     filter: drop-shadow(8px 8px 10px rgb(128, 128, 128));
+}
+
+.book__info {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.book__read--status {
+    font-size: 18px;
+}
+
+.yes__no--wrapper {
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+    max-width: 58px;
+    height: 28px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 0 4px;
+}
+
+.yes__btn {
+    background-color: green;
+}
+
+.no__btn {
+    background-color: red;
 }

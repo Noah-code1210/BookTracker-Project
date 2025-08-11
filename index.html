@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BookTracker</title>
     <script src="index.js" defer></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <nav id="navbar">
-        <div class="img__wrapper">
-            <img src="https://th.bing.com/th/id/R.a76d2fcae6994fef3e766f20fe16eb05?rik=7Q3vOJ88%2bvme6g&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fRTA%2fEnz%2fRTAEnzgnc.jpg&ehk=dgxgxTA00J6Pvn7LK1hEuTjp16CLHuR%2fVhI5ZaOd6FE%3d&risl=&pid=ImgRaw&r=0" alt="logo" class="book__img">
-            <div class="title">
-                BookTracker
-            </div>
-        </div>
+      <div class="img__wrapper">
+        <img
+          src="https://th.bing.com/th/id/R.a76d2fcae6994fef3e766f20fe16eb05?rik=7Q3vOJ88%2bvme6g&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fRTA%2fEnz%2fRTAEnzgnc.jpg&ehk=dgxgxTA00J6Pvn7LK1hEuTjp16CLHuR%2fVhI5ZaOd6FE%3d&risl=&pid=ImgRaw&r=0"
+          alt="logo"
+          class="book__img"
+        />
+        <div class="title">BookTracker</div>
+      </div>
     </nav>
     <header id="header">
-        <button class="add__btn">
-            Add Book +
-        </button>
-        <div class="book__info--wrapper">
-            <div class="book__title">Title: </div>
-            <div class="book__author">Author: </div>
-            <div class="book__pages">Page Count:</div>
+      <button class="add__btn">Add Book +</button>
+      <div class="book__info--wrapper">
+        <div class="book__title book__info">Title:</div>
+        <div class="book__author book__info">Author:</div>
+        <div class="book__pages book__info">Page Count:</div>
+        <div class="book__read--status book__info">
+          Have you read this book?
         </div>
+        <div class="yes__no--wrapper">
+          <button class="yes__btn btn">Yes</button>
+          <button class="no__btn btn">No</button>
+        </div>
+      </div>
     </header>
   </body>
 </html>
