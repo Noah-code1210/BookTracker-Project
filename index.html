@@ -20,6 +20,45 @@
     </nav>
     <header id="header">
       <button class="add__btn">Add Book +</button>
+      <dialog open>
+        <div class="close__form--btn">
+          ✖
+        </div>
+        <form id="form">
+          <div class="field">
+            <label for="book__title">Title:</label>
+            <input type="text" name="title" id="bookTitle" maxlength="70" required/>
+          </div>
+          <div class="field">
+            <label for="book__author"> Author: </label>
+            <input type="text" name="author" id="bookAuthor" required/>
+          </div>
+          <div class="field">
+            <label for="book__pages"> Pages: </label>
+            <input type="number" name="pages" id="bookPages" min="1" required/>
+          </div>
+          <div class="field choices">
+            <span>
+              Status:
+            </span>
+            <div class="options">
+              <input type="radio" name="readStatus" value="true" id="read-yes" checked>
+              <label for="read-yes">Finished</label>
+            </div>
+            <div class="options">
+              <input type="radio" name="readStatus" value="true" id="read-yes" checked>
+              <label for="read-now">Reading</label>
+            </div>
+            <div class="options">
+              <input type="radio" name="readStatus" value="false" id="read-no">
+              <label for="read-no">Haven't started</label>
+            </div>
+          </div>
+          <button class="add__book--btn" type="submit">
+            Add Book
+          </button>
+        </form>
+      </dialog>
       <div class="book__info--wrapper">
         <div class="book__info">
           Title: <span class="book__title">The Hobbit</span>
@@ -27,9 +66,14 @@
         <div class="book__author book__info">
           Author: <span class="book__title">J.R.R Tolkien</span>
         </div>
-        <div class="book__pages book__info">Page Count:</div>
-        <div class="book__read--status book__info">Status:</div>
-          <button class="status__btn">Change Status</button>
+        <div class="book__pages book__info">
+          Page Count: <span class="book__title">295</span>
+        </div>
+        <div class="book__read--status book__info">
+          Status: <span class="book__title">Read</span>
+        </div>
+        <button class="edit__btn">Change Status</button>
+        <button class="edit__btn">Delete Book</button>
       </div>
     </header>
   </body>
