@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    background-color: #ececec;
+    background-color: #ffffff;
     gap: 30px;
     padding: 10px 12px;
     filter: drop-shadow(8px 8px 10px rgb(128, 128, 128));
@@ -79,9 +79,10 @@
     font-weight: 800;
 }
 
-.book__read--status {
-    font-size: 18px;
+.book__title {
+    font-weight: 500;
 }
+
 
 .yes__no--wrapper {
     text-align: center;
@@ -89,18 +90,18 @@
 
 .btn {
     width: 100%;
-    max-width: 58px;
-    height: 28px;
+    max-width: 78px;
+    height: 38px;
     border: none;
     border-radius: 2px;
     cursor: pointer;
     margin: 0 4px;
 }
 
-.yes__btn {
+.yes__btn:focus {
     background-color: green;
 }
 
-.no__btn {
+.no__btn:focus {
     background-color: red;
 }
