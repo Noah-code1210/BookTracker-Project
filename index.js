@@ -17,12 +17,53 @@
 //   };
 // }
 
-const reader1 = new Book("The Hobbit", "J.R.R Tolkien", "295", true);
-const reader2 = new Book(
-  "The Lord of the Rings",
-  "J.R.R Tolkien",
-  "398",
-  false
-);
-reader1.sayInfo(); // logs 'steve'
-reader2.sayInfo(); // logs 'also steve'
+// function Player(name, marker) {
+//   this.name = name;
+//   this.marker = marker;
+//   this.sayName = function () {
+//     console.log(this.name);
+//   };
+// }
+
+// const player1 = new Player("steve", "X");
+// const player2 = new Player("also steve", "O");
+// player1.sayName(); // logs 'steve'
+// player2.sayName(); // logs 'also steve'
+
+// Player.prototype.sayHello = function () {
+//   console.log("Hello, I'm a player!");
+// };
+
+// player1.sayHello(); // logs "Hello, I'm a player!"
+// player2.sayHello(); // logs "Hello, I'm a player!"
+
+// Player.prototype.showMarker = function() {
+//     console.log(this.marker)
+// }
+
+// player1.showMarker();
+// player2.showMarker();
+
+function Person(name) {
+    this.name = name
+}
+Person.prototype.sayName = function() {
+    console.log(`Hi, my name is ${this.name}`)
+}
+
+function Player(name, marker) {
+    this.name = name;
+    this.marker = marker;
+}
+Player.prototype.showInfo = function () {
+    console.log(`I am using ${this.marker} as my marker`)
+}
+
+Object.setPrototypeOf(Player.prototype, Person.prototype);
+Object.getPrototypeOf(Player.prototype, Person.prototype);
+
+const player1 = new Player('Steve', 'X');
+const player2 = new Player('Amy', 'O');
+player1.sayName()
+player2.sayName()
+player1.showInfo()
