@@ -76,6 +76,10 @@ label {
   font-size: 18px;
 }
 
+input {
+  font-size: 20px;
+}
+
 input:not([type="radio"]) {
   width: 510px;
   height: 2.2rem;
@@ -97,7 +101,7 @@ input:not([type="radio"]) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .options > input {
@@ -155,7 +159,7 @@ input:not([type="radio"]) {
 .book__info--wrapper {
   width: 100%;
   max-width: 300px;
-  height: 340px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -177,7 +181,8 @@ input:not([type="radio"]) {
 
 .book__title,
 .book__author,
-.book__pages {
+.book__pages,
+.book__read--status {
   padding: 8px 0;
 }
 
@@ -200,4 +205,9 @@ input:not([type="radio"]) {
   margin: 10px 0;
   cursor: pointer;
   filter: drop-shadow(0px 5px 2px rgb(193, 193, 193));
+  transition: all 200ms ease;
+}
+
+.delete__btn:hover {
+  background-color: rgb(197, 26, 26);
 }

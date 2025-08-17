@@ -80,7 +80,7 @@ function createBookCard(book, bookId) {
 
   const statusValue = document.createElement("span");
   statusValue.classList.add("book__status");
-  statusValue.textContent = book.read ? "Finished" || "In Progress" : "Not Started";
+  statusValue.textContent = book.read ? "Finished" : "Not Started";
   readStatus.appendChild(statusValue);
   cardContent.appendChild(readStatus);
 
@@ -95,11 +95,11 @@ function createBookCard(book, bookId) {
 
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete Book";
-  deleteBtn.classList.add("edit__btn");
+  deleteBtn.classList.add("edit__btn", "delete__btn");
   cardActions.appendChild(deleteBtn);
 
   deleteBtn.addEventListener("click", (event) => {
-    const parentCard = event.target.closest(".card");
+    const parentCard = event.target.closest(".book__info--wrapper");
     const bookId = parentCard.id;
     myLibrary = myLibrary.filter((book) => book.id !== bookId);
     displayLibrary();
@@ -112,12 +112,6 @@ function createBookCard(book, bookId) {
 
   return newCard;
 }
-deleteBtn.addEventListener("click", (event) => {
-  const parentCard = event.target.closest(".book__info--wrapper");
-  const bookId = parentCard.id;
-  myLibrary = myLibrary.filter((book) => book.id !== bookId);
-  displayLibrary();
-});
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
@@ -135,7 +129,9 @@ function displayLibrary() {
 }
 
 const hobbit = new Book("The Hobbit", "J.R.R Tolkien", "295", true);
+const onTheRun = new Book("On The Run", "Brodie Cole", "476", false)
+const narnia = new Book("The Lion The Witch and the Wardrobe", "C.S. Lewis", "88", true)
 
-myLibrary.push(hobbit);
+myLibrary.push(hobbit, onTheRun, narnia);
 
 displayLibrary(myLibrary);
