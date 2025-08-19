@@ -21,11 +21,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  background-color: transparent;
 }
 
 .book__img {
   width: 100px;
   height: 100px;
+  background-color: transparent;
 }
 
 .title {
@@ -145,7 +147,7 @@ input:not([type="radio"]) {
   border: none;
   border-radius: 4px;
   color: white;
-  background-color: black;
+  background-color: #1f1f1f;
   cursor: pointer;
   margin-bottom: 30px;
   border: 2px solid black;
@@ -163,7 +165,7 @@ input:not([type="radio"]) {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #1f1f1f;
   padding: 20px 24px;
   gap: 20px;
   filter: drop-shadow(0px 10px 10px rgb(128, 128, 128));
@@ -184,13 +186,14 @@ input:not([type="radio"]) {
 .book__pages,
 .book__read--status {
   padding: 8px 0;
+  color: white;
 }
 
 .book__author,
 .book__pages,
 .book__read--status,
 .book__status {
-  color: rgb(95, 95, 95);
+  color: rgb(255, 255, 255);
 }
 
 .edit__btn {
@@ -204,7 +207,6 @@ input:not([type="radio"]) {
   padding: 4px 10px;
   margin: 10px 0;
   cursor: pointer;
-  filter: drop-shadow(0px 5px 2px rgb(193, 193, 193));
   transition: all 200ms ease;
 }
 
